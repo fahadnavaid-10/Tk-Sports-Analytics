@@ -86,7 +86,7 @@ const chartOptions = {
       bodyColor: "#00ff88",
       padding: 12,
       callbacks: {
-        label: (ctx: { parsed: { y: number } }) => `+${ctx.parsed.y} Units`,
+        label: (ctx: any) => `+${ctx.parsed.y} Units`,
       },
     },
   },
