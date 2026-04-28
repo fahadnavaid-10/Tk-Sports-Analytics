@@ -248,7 +248,7 @@ export default function CredibilitySection() {
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackViewContent("Credibility — CTA Clicked")}
+            onClick={() => { window.fbq?.('track', 'Lead'); trackViewContent("Credibility — CTA Clicked"); }}
           >
             🚀 JOIN FREE TELEGRAM NOW
           </a>

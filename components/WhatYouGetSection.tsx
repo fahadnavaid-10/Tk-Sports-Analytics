@@ -134,7 +134,7 @@ export default function WhatYouGetSection() {
             id="benefits-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button"
-            onClick={() => trackTelegramClick("benefits_section_cta")}
+            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("benefits_section_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}

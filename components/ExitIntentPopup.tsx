@@ -116,7 +116,7 @@ export default function ExitIntentPopup() {
           href="https://t.me/TKSportsAnalytics_Free"
           className="cta-button"
           onClick={() => {
-            trackTelegramClick("exit_intent_popup_cta");
+            window.fbq?.('track', 'Lead'); trackTelegramClick("exit_intent_popup_cta");
             setVisible(false);
           }}
           target="_blank"

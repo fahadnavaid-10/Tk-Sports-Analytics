@@ -375,6 +375,7 @@ export default function SocialProofSection() {
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => { window.fbq?.('track', 'Lead'); }}
           >
             🚀 JOIN FREE TELEGRAM NOW
           </a>

@@ -98,7 +98,7 @@ export default function FinalCTASection() {
             id="final-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button animate-pulse-glow"
-            onClick={() => trackTelegramClick("final_cta")}
+            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("final_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ fontSize: "19px", padding: "26px 48px", maxWidth: "520px", letterSpacing: "0.01em" }}

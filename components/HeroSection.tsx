@@ -221,7 +221,7 @@ export default function HeroSection() {
               id="hero-cta"
               href="https://t.me/TKSportsAnalytics_Free"
               className="cta-button animate-pulse-glow"
-              onClick={() => trackTelegramClick("hero_main_cta")}
+              onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("hero_main_cta"); }}
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "clamp(15px, 3vw, 18px)", padding: "20px 32px" }}

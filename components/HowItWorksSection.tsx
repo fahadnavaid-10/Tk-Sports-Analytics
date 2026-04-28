@@ -139,7 +139,7 @@ export default function HowItWorksSection() {
             id="how-it-works-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button"
-            onClick={() => trackTelegramClick("how_it_works_cta")}
+            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("how_it_works_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}

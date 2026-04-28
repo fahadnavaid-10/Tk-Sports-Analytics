@@ -96,7 +96,7 @@ export default function FAQSection() {
           <a
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button"
-            onClick={() => trackTelegramClick("faq_footer_cta")}
+            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("faq_footer_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
           >
