@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +58,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f0f0f" />
       </head>
 
-      <body>
+      <body suppressHydrationWarning>
         {children}
 
         {/*

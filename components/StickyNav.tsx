@@ -51,73 +51,86 @@ export default function StickyNav() {
           justifyContent: "space-between",
         }}
       >
-        {/* Brand */}
-        <a href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, textDecoration: "none" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/tk-logo.png" alt="TK Sports Analytics" style={{ height: "36px", width: "auto" }} />
-        </a>
+        {/* Left Side: Brand + Nav Links */}
+        <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+          {/* Brand */}
+          <a href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, textDecoration: "none" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/tk-logo.png" alt="TK Sports Analytics" style={{ height: "36px", width: "auto" }} />
+          </a>
 
-        {/* Desktop nav links */}
-        <div className="hide-mobile" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          {[
-            ["Results", "#results"],
-            ["Benefits", "#benefits"],
-            ["Stats", "#stats"],
-            ["FAQ", "#faq"],
-          ].map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              style={{
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "var(--color-muted)",
-                transition: "color 0.2s",
-                whiteSpace: "nowrap",
-              }}
-              onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#fff")}
-              onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "var(--color-muted)")}
-            >
-              {label}
-            </a>
-          ))}
+          {/* Desktop nav links */}
+          <div className="hide-mobile" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+            {[
+              ["Results", "#results"],
+              ["Benefits", "#benefits"],
+              ["Stats", "#stats"],
+              ["FAQ", "#faq"],
+            ].map(([label, href]) => (
+              <a
+                key={label}
+                href={href}
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 500,
+                  color: "var(--color-muted)",
+                  transition: "color 0.2s",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#fff")}
+                onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "var(--color-muted)")}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* CTA — sticky_nav_cta */}
-        <a
-          id="nav-cta"
-          href="https://t.me/TKSportsAnalytics_Free"
-          onClick={() => trackTelegramClick("sticky_nav_cta")}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            background: "linear-gradient(135deg, #00ff88, #00e57a)",
-            color: "#000",
-            fontFamily: "var(--font-heading)",
-            fontSize: "clamp(12px, 2.5vw, 13px)",
-            fontWeight: 800,
-            padding: "8px 16px",
-            borderRadius: "8px",
-            transition: "transform 0.2s, box-shadow 0.2s",
-            boxShadow: "0 2px 16px rgba(0,255,136,0.2)",
-            whiteSpace: "nowrap",
-            textDecoration: "none",
-            flexShrink: 0,
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 4px 24px rgba(0,255,136,0.4)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 2px 16px rgba(0,255,136,0.2)";
-          }}
-        >
-          🚀 Join Free
-        </a>
+        {/* Right Side: Social Icons + CTA */}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {/* Social Icons */}
+          <div className="hide-mobile" style={{ display: "flex", alignItems: "center", gap: "16px", marginRight: "20px" }}>
+            <a href="https://www.instagram.com/tksportsanalytics/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", fontSize: "16px", filter: "grayscale(100%)", opacity: 0.7, transition: "opacity 0.2s, filter 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.filter = "grayscale(0%)"; }} onMouseLeave={(e) => { e.currentTarget.style.opacity = "0.7"; e.currentTarget.style.filter = "grayscale(100%)"; }}>📸</a>
+            <a href="https://www.tiktok.com/@tksportsanalytics" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", fontSize: "16px", filter: "grayscale(100%)", opacity: 0.7, transition: "opacity 0.2s, filter 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.filter = "grayscale(0%)"; }} onMouseLeave={(e) => { e.currentTarget.style.opacity = "0.7"; e.currentTarget.style.filter = "grayscale(100%)"; }}>🎵</a>
+            <a href="https://x.com/TKSportsGators" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", fontSize: "16px", filter: "grayscale(100%)", opacity: 0.7, transition: "opacity 0.2s, filter 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.filter = "grayscale(0%)"; }} onMouseLeave={(e) => { e.currentTarget.style.opacity = "0.7"; e.currentTarget.style.filter = "grayscale(100%)"; }}>🐦</a>
+          </div>
+
+          {/* CTA — sticky_nav_cta */}
+          <a
+            id="nav-cta"
+            href="https://t.me/TKSportsAnalytics_Free"
+            onClick={() => trackTelegramClick("sticky_nav_cta")}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              background: "linear-gradient(135deg, #00ff88, #00e57a)",
+              color: "#000",
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(12px, 2.5vw, 13px)",
+              fontWeight: 800,
+              padding: "8px 16px",
+              borderRadius: "8px",
+              transition: "transform 0.2s, box-shadow 0.2s",
+              boxShadow: "0 2px 16px rgba(0,255,136,0.2)",
+              whiteSpace: "nowrap",
+              textDecoration: "none",
+              flexShrink: 0,
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 4px 24px rgba(0,255,136,0.4)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 2px 16px rgba(0,255,136,0.2)";
+            }}
+          >
+            🚀 Join Free
+          </a>
+        </div>
       </div>
     </nav>
   );

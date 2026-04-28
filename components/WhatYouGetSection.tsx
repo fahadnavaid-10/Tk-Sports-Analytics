@@ -45,10 +45,7 @@ export default function WhatYouGetSection() {
   return (
     <section
       className="section"
-      style={{
-        background:
-          "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 70%), var(--color-bg-2)",
-      }}
+      style={{ background: "var(--color-bg)" }}
       onMouseEnter={() => trackViewContent("Benefits — What You Get For Free")}
     >
       <div className="container" style={{ maxWidth: "1000px", margin: "0 auto" }}>

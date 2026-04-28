@@ -91,30 +91,27 @@ export default function FAQSection() {
           ))}
         </div>
 
-        {/* Bottom note */}
-        <p
-          style={{
-            textAlign: "center",
-            marginTop: "28px",
-            fontSize: "14px",
-            color: "var(--color-muted)",
-          }}
-        >
-          Still have questions?{" "}
+        {/* Bottom CTA */}
+        <div style={{ textAlign: "center", marginTop: "48px" }}>
           <a
             href="https://t.me/TKSportsAnalytics_Free"
+            className="cta-button"
             onClick={() => trackTelegramClick("faq_footer_cta")}
             target="_blank"
             rel="noopener noreferrer"
+          >
+            🚀 JOIN FREE TELEGRAM NOW
+          </a>
+          <p
             style={{
-              color: "var(--color-green)",
-              fontWeight: 600,
-              textDecoration: "underline",
+              marginTop: "16px",
+              fontSize: "14px",
+              color: "var(--color-muted)",
             }}
           >
-            Ask inside the Telegram channel →
-          </a>
-        </p>
+            Still have questions? Ask inside the Telegram channel.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -21,7 +21,7 @@ export default function CredibilitySection() {
   return (
     <section
       className="section"
-      style={{ background: "var(--color-bg)" }}
+      style={{ background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 70%), var(--color-bg-2)" }}
       onMouseEnter={() => trackViewContent("Credibility — Verified Numbers")}
     >
       <div className="container" style={{ maxWidth: "1000px", margin: "0 auto" }}>
@@ -240,6 +240,19 @@ export default function CredibilitySection() {
         >
           All results independently verified on The Action Network. Past performance is not indicative of future results.
         </p>
+
+        {/* CTA */}
+        <div style={{ textAlign: "center", marginTop: "32px" }}>
+          <a
+            href="https://t.me/TKSportsAnalytics_Free"
+            className="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackViewContent("Credibility — CTA Clicked")}
+          >
+            🚀 JOIN FREE TELEGRAM NOW
+          </a>
+        </div>
       </div>
     </section>
   );

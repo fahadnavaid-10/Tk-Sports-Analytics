@@ -183,7 +183,7 @@ export default function SocialProofSection() {
 
           {/* Action Network badge */}
           <a
-            href="https://www.actionnetwork.com"
+            href="https://app.actionnetwork.com/4zu6/ul9ste7w"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -366,6 +366,18 @@ export default function SocialProofSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div style={{ textAlign: "center", marginTop: "48px" }}>
+          <a
+            href="https://t.me/TKSportsAnalytics_Free"
+            className="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🚀 JOIN FREE TELEGRAM NOW
+          </a>
         </div>
       </div>
 

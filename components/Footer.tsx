@@ -42,7 +42,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {[
                 { label: "Free Telegram", href: "https://t.me/TKSportsAnalytics_Free" },
-                { label: "Action Network", href: "https://www.actionnetwork.com" },
+                { label: "Action Network", href: "https://app.actionnetwork.com/4zu6/ul9ste7w" },
                 { label: "Privacy Policy", href: "/privacy" },
                 { label: "Terms of Service", href: "#" },
               ].map((link) => (
@@ -74,9 +74,9 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {[
                 { label: "Telegram (Free)", href: "https://t.me/TKSportsAnalytics_Free", icon: "✈️" },
-                { label: "Instagram", href: "#", icon: "📸" },
-                { label: "X (Twitter)", href: "#", icon: "🐦" },
-                { label: "TikTok", href: "#", icon: "🎵" },
+                { label: "Instagram", href: "https://www.instagram.com/tksportsanalytics/", icon: "📸" },
+                { label: "X (Twitter)", href: "https://x.com/TKSportsGators", icon: "🐦" },
+                { label: "TikTok", href: "https://www.tiktok.com/@tksportsanalytics", icon: "🎵" },
               ].map((s) => (
                 <a
                   key={s.label}

@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 export default function Home() {
   return (
@@ -28,17 +29,19 @@ export default function Home() {
 
         <div className="divider" />
 
+        {/* Section 4: The Numbers / Credibility */}
+        <div id="stats">
+          <CredibilitySection />
+        </div>
+
+        <div className="divider" />
+
         {/* Section 3: What You Get */}
         <div id="benefits">
           <WhatYouGetSection />
         </div>
 
-        <div className="divider" />
 
-        {/* Section 4: The Numbers / Credibility */}
-        <div id="stats">
-          <CredibilitySection />
-        </div>
 
         <div className="divider" />
 
@@ -63,6 +66,9 @@ export default function Home() {
 
       {/* Exit Intent Popup */}
       <ExitIntentPopup />
+
+      {/* Mobile Sticky CTA */}
+      <MobileStickyCTA />
     </>
   );
 }
