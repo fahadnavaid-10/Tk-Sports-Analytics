@@ -14,7 +14,7 @@ const TICKER_ITEMS = [
   "NCAAB +135U",
   "NBA +38U",
   "Verified on Action Network",
-  "2,000+ Members",
+  "Join our growing community",
   "30+ Years Experience",
 ];
 
@@ -196,8 +196,7 @@ export default function HeroSection() {
               padding: "0 4px",
             }}
           >
-            Join{" "}
-            <strong style={{ color: "#ffffff" }}>2,000+ smart bettors</strong>{" "}
+            <strong style={{ color: "#ffffff" }}>Join our growing community of data-driven sports bettors</strong>{" "}
             getting{" "}
             <strong style={{ color: "#ffd700" }}>FREE data-driven</strong> sports
             predictions daily.{" "}
@@ -221,7 +220,7 @@ export default function HeroSection() {
               id="hero-cta"
               href="https://t.me/TKSportsAnalytics_Free"
               className="cta-button animate-pulse-glow"
-              onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("hero_main_cta"); }}
+              onClick={() => { trackTelegramClick("hero_main_cta"); }}
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "clamp(15px, 3vw, 18px)", padding: "20px 32px" }}

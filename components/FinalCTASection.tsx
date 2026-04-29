@@ -5,7 +5,7 @@ import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 const trustBadges = [
   { icon: "🔞", label: "21+ Only" },
   { icon: "✅", label: "Verified Results" },
-  { icon: "👥", label: "2,000+ Members" },
+  { icon: "👥", label: "Growing Community" },
   { icon: "🏆", label: "Action Network" },
 ];
 
@@ -13,7 +13,7 @@ const risks = [
   "Free forever option available",
   "No credit card required",
   "Unsubscribe anytime, no penalties",
-  "2,000+ active members",
+  "Growing community of data-driven bettors",
   "Verified track record — publicly auditable",
 ];
 
@@ -68,7 +68,7 @@ export default function FinalCTASection() {
             lineHeight: 1.65,
           }}
         >
-          Join 2,000+ members who stopped gambling blind and started using{" "}
+          Join our growing community of data-driven sports bettors who stopped gambling blind and started using{" "}
           <strong style={{ color: "var(--color-white)" }}>data-driven analysis</strong> to make smarter decisions.
         </p>
 
@@ -98,7 +98,7 @@ export default function FinalCTASection() {
             id="final-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button animate-pulse-glow"
-            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("final_cta"); }}
+            onClick={() => { trackTelegramClick("final_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ fontSize: "19px", padding: "26px 48px", maxWidth: "520px", letterSpacing: "0.01em" }}

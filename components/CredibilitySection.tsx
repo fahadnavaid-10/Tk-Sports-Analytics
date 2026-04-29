@@ -1,6 +1,6 @@
 "use client";
 
-import { trackViewContent } from "@/lib/pixel";
+import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 
 const statsGrid = [
   { value: "+465", label: "Units All Time", color: "var(--color-green)" },
@@ -248,7 +248,7 @@ export default function CredibilitySection() {
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => { window.fbq?.('track', 'Lead'); trackViewContent("Credibility — CTA Clicked"); }}
+            onClick={() => { trackTelegramClick("credibility_section_cta"); trackViewContent("Credibility — CTA Clicked"); }}
           >
             🚀 JOIN FREE TELEGRAM NOW
           </a>

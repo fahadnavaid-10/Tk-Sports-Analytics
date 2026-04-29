@@ -8,7 +8,7 @@ export default function MobileStickyCTA() {
       <div className="mobile-sticky-cta">
         <a
           href="https://t.me/TKSportsAnalytics_Free"
-          onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("mobile_sticky_cta"); }}
+          onClick={() => { trackTelegramClick("mobile_sticky_cta"); }}
           target="_blank"
           rel="noopener noreferrer"
           style={{

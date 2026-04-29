@@ -51,7 +51,7 @@ export default function Footer() {
                   href={link.href}
                   onClick={() => {
                     if (link.href.includes("t.me")) {
-                      window.fbq?.('track', 'Lead'); trackTelegramClick("footer_links_cta");
+                      trackTelegramClick("footer_links_cta");
                     }
                   }}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -83,7 +83,7 @@ export default function Footer() {
                   href={s.href}
                   onClick={() => {
                     if (s.href.includes("t.me")) {
-                      window.fbq?.('track', 'Lead'); trackTelegramClick("footer_social_cta");
+                      trackTelegramClick("footer_social_cta");
                     }
                   }}
                   target="_blank"

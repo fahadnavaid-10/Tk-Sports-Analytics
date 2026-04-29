@@ -139,12 +139,12 @@ export default function HowItWorksSection() {
             id="how-it-works-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button"
-            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("how_it_works_cta"); }}
+            onClick={() => { trackTelegramClick("how_it_works_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}
           >
-            🚀 JOIN 2,000+ MEMBERS FREE
+            🚀 JOIN OUR GROWING COMMUNITY OF DATA-DRIVEN SPORTS BETTORS
           </a>
           <p style={{ marginTop: "14px", fontSize: "13px", color: "var(--color-muted-2)" }}>
             Instant access · No forms · No payment required

@@ -14,7 +14,7 @@ import {
 } from "chart.js";
 
 import dynamic from "next/dynamic";
-import { trackViewContent } from "@/lib/pixel";
+import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 
 // Dynamically import Line chart to avoid SSR canvas errors
 const Line = dynamic(
@@ -375,7 +375,7 @@ export default function SocialProofSection() {
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => { window.fbq?.('track', 'Lead'); }}
+            onClick={() => { trackTelegramClick("social_proof_cta"); }}
           >
             🚀 JOIN FREE TELEGRAM NOW
           </a>

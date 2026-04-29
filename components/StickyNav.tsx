@@ -99,7 +99,7 @@ export default function StickyNav() {
           <a
             id="nav-cta"
             href="https://t.me/TKSportsAnalytics_Free"
-            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("sticky_nav_cta"); }}
+            onClick={() => { trackTelegramClick("sticky_nav_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{

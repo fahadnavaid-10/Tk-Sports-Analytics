@@ -5,14 +5,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "TK Sports Analytics | Free Data-Driven Sports Predictions",
   description:
-    "Join 2,000+ members getting FREE data-driven sports predictions daily. +465 Units, 9% ROI, verified on Action Network. No credit card required.",
+    "Join our growing community of data-driven sports bettors getting FREE predictions daily. +465 Units, 9% ROI, verified on Action Network.",
   keywords:
     "sports analytics, sports picks, sports betting, free picks, telegram sports, data-driven predictions, sports handicapping",
   authors: [{ name: "TK Sports Analytics" }],
   openGraph: {
     title: "TK Sports Analytics | Stop Guessing. Start Winning.",
     description:
-      "Join 2,000+ smart bettors getting FREE data-driven sports predictions. +465 Units all time. Verified on Action Network.",
+      "Join our growing community of data-driven sports bettors getting FREE predictions daily. +465 Units all time. Verified on Action Network.",
     type: "website",
     locale: "en_US",
   },

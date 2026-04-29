@@ -24,7 +24,7 @@ const benefits = [
   {
     icon: "💬",
     title: "PRIVATE COMMUNITY",
-    desc: "Join 2,000+ members in our exclusive Telegram channel. Ask questions, share insights, and learn together.",
+    desc: "Join our growing community of data-driven sports bettors in our exclusive Telegram channel. Ask questions, share insights, and learn together.",
     color: "#ffd700",
   },
   {
@@ -134,7 +134,7 @@ export default function WhatYouGetSection() {
             id="benefits-cta"
             href="https://t.me/TKSportsAnalytics_Free"
             className="cta-button"
-            onClick={() => { window.fbq?.('track', 'Lead'); trackTelegramClick("benefits_section_cta"); }}
+            onClick={() => { trackTelegramClick("benefits_section_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}

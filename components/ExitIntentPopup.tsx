@@ -106,8 +106,7 @@ export default function ExitIntentPopup() {
             lineHeight: 1.6,
           }}
         >
-          Join 2,000+ members already receiving daily data-driven picks.
-          No credit card. No email. Instant access.
+          Join our growing community of data-driven sports bettors already receiving daily picks.
         </p>
 
         {/* CTA — exit_intent_popup_cta */}
@@ -116,7 +115,7 @@ export default function ExitIntentPopup() {
           href="https://t.me/TKSportsAnalytics_Free"
           className="cta-button"
           onClick={() => {
-            window.fbq?.('track', 'Lead'); trackTelegramClick("exit_intent_popup_cta");
+            trackTelegramClick("exit_intent_popup_cta");
             setVisible(false);
           }}
           target="_blank"
