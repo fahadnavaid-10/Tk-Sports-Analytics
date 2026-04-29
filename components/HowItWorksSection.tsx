@@ -144,7 +144,7 @@ export default function HowItWorksSection() {
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}
           >
-            🚀 JOIN OUR GROWING COMMUNITY OF DATA-DRIVEN SPORTS BETTORS
+            🚀 JOIN US FREE NOW!
           </a>
           <p style={{ marginTop: "14px", fontSize: "13px", color: "var(--color-muted-2)" }}>
             Instant access · No forms · No payment required
