@@ -3,18 +3,18 @@
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 
 const statsGrid = [
-  { value: "+465", label: "Units All Time", color: "var(--color-green)" },
-  { value: "1,173", label: "Total Wins", color: "var(--color-gold)" },
+  { value: "+518", label: "Units Last 12 months", color: "var(--color-green)" },
+  { value: "1220-972", label: "Record", color: "var(--color-gold)" },
   { value: "9%", label: "ROI", color: "var(--color-green)" },
-  { value: "55%", label: "Win Rate", color: "var(--color-gold)" },
+  { value: "72%", label: "CLV (Closing Line Value)", color: "var(--color-gold)" },
 ];
 
 const sportRows = [
-  { sport: "⚾ MLB", units: "+119", record: "240-201-5", roi: "12.8%" },
-  { sport: "🏈 NFL", units: "+80", record: "175-127-1", roi: "8.1%" },
-  { sport: "🏈 NCAAF", units: "+92", record: "79-41-0", roi: "18.5%" },
-  { sport: "🏀 NCAAB", units: "+135", record: "513-437-5", roi: "6.2%" },
-  { sport: "🏀 NBA", units: "+38", record: "166-137-2", roi: "5.1%" },
+  { sport: "⚾ MLB", units: "+145.74", record: "264-213-5", roi: "12.8%" },
+  { sport: "🏈 NFL", units: "+80.68", record: "175-127-1", roi: "8.1%" },
+  { sport: "🏈 NCAAF", units: "+92.23", record: "79-41-0", roi: "18.5%" },
+  { sport: "🏀 NCAAB", units: "+135.48", record: "513-437-5", roi: "6.2%" },
+  { sport: "🏀 NBA", units: "+64.23", record: "189-154-2", roi: "5.1%" },
 ];
 
 export default function CredibilitySection() {
@@ -43,29 +43,9 @@ export default function CredibilitySection() {
         </div>
 
         {/* Big stats grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "2px",
-            background: "var(--color-border)",
-            border: "1px solid var(--color-border)",
-            borderRadius: "var(--radius-md)",
-            overflow: "hidden",
-            marginBottom: "40px",
-          }}
-        >
+        <div className="cred-stats-grid">
           {statsGrid.map((s, i) => (
-            <div
-              key={i}
-              style={{
-                background: "var(--color-card)",
-                padding: "36px 20px",
-                textAlign: "center",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
+            <div key={i} className="cred-stat-cell">
               <div
                 aria-hidden="true"
                 style={{
@@ -74,30 +54,10 @@ export default function CredibilitySection() {
                   background: `radial-gradient(circle at 50% 0%, ${s.color}0a, transparent 60%)`,
                 }}
               />
-              <div
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "clamp(36px, 7vw, 56px)",
-                  fontWeight: 700,
-                  color: s.color,
-                  lineHeight: 1,
-                  marginBottom: "10px",
-                  position: "relative",
-                }}
-              >
+              <div className="cred-stat-value" style={{ color: s.color }}>
                 {s.value}
               </div>
-              <div
-                style={{
-                  fontSize: "13px",
-                  color: "var(--color-muted)",
-                  fontWeight: 500,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  fontFamily: "var(--font-mono)",
-                  position: "relative",
-                }}
-              >
+              <div className="cred-stat-label">
                 {s.label}
               </div>
             </div>
@@ -201,7 +161,7 @@ export default function CredibilitySection() {
                   >
                     ⚡ TOTAL
                   </td>
-                  <td className="positive" style={{ fontSize: "16px" }}>+465</td>
+                  <td className="positive" style={{ fontSize: "16px" }}>+518</td>
                   <td
                     style={{
                       fontFamily: "var(--font-mono)",
@@ -210,7 +170,7 @@ export default function CredibilitySection() {
                       fontSize: "13px",
                     }}
                   >
-                    1,173-943-13
+                    1220-972-13
                   </td>
                   <td
                     style={{
@@ -254,6 +214,53 @@ export default function CredibilitySection() {
           </a>
         </div>
       </div>
+      <style>{`
+        .cred-stats-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2px;
+          background: var(--color-border);
+          border: 1px solid var(--color-border);
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          margin-bottom: 40px;
+        }
+        .cred-stat-cell {
+          background: var(--color-card);
+          padding: 36px 20px;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .cred-stat-value {
+          font-family: var(--font-mono);
+          font-size: clamp(36px, 7vw, 56px);
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 10px;
+          position: relative;
+        }
+        .cred-stat-label {
+          font-size: 13px;
+          color: var(--color-muted);
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          font-family: var(--font-mono);
+          position: relative;
+        }
+        @media (max-width: 600px) {
+          .cred-stats-grid {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .cred-stat-cell {
+            padding: 24px 16px;
+          }
+          .cred-stat-value {
+            font-size: clamp(32px, 8vw, 42px);
+          }
+        }
+      `}</style>
     </section>
   );
 }

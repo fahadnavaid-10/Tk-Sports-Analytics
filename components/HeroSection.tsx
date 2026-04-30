@@ -4,15 +4,15 @@ import { useEffect, useRef } from "react";
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 
 const TICKER_ITEMS = [
-  "+465 Units All Time",
-  "1,173 Wins",
+  "+518 Units Last 12 Months",
+  "Record: 1220-972",
   "9% ROI",
-  "55% Win Rate",
-  "MLB +119U",
-  "NFL +80U",
-  "NCAAF +92U",
-  "NCAAB +135U",
-  "NBA +38U",
+  "72% CLV",
+  "MLB +145.74U",
+  "NFL +80.68U",
+  "NCAAF +92.23U",
+  "NCAAB +135.48U",
+  "NBA +64.23U",
   "Verified on Action Network",
   "Join our growing community",
   "30+ Years Experience",
@@ -25,10 +25,10 @@ export default function HeroSection() {
 
   useEffect(() => {
     const targets = [
-      { id: "counter-units", end: 465, prefix: "+", suffix: "" },
-      { id: "counter-wins", end: 1173, prefix: "", suffix: "" },
+      { id: "counter-units", end: 518, prefix: "+", suffix: "" },
+      { id: "counter-wins", end: 1220, prefix: "", suffix: "-972" },
       { id: "counter-roi", end: 9, prefix: "", suffix: "%" },
-      { id: "counter-winrate", end: 55, prefix: "", suffix: "%" },
+      { id: "counter-clv", end: 72, prefix: "", suffix: "%" },
     ];
 
     const animateCounter = (el: HTMLElement, end: number, prefix: string, suffix: string) => {
@@ -177,7 +177,7 @@ export default function HeroSection() {
                 backgroundClip: "text",
               }}
             >
-              Start Winning.
+              Start Investing.
             </span>
           </h1>
 
@@ -251,10 +251,10 @@ export default function HeroSection() {
             style={{ marginTop: "44px", animationDelay: "0.5s", opacity: 0, animationFillMode: "forwards" }}
           >
             {[
-              { id: "counter-units", label: "Units All Time" },
-              { id: "counter-wins", label: "Total Wins" },
+              { id: "counter-units", label: "Units Last 12 months" },
+              { id: "counter-wins", label: "Record" },
               { id: "counter-roi", label: "ROI" },
-              { id: "counter-winrate", label: "Win Rate" },
+              { id: "counter-clv", label: "CLV (Closing Line Value)" },
             ].map((item) => (
               <div key={item.id} className="hero-stat-cell">
                 <div

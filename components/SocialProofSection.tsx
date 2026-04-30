@@ -41,7 +41,7 @@ const months = [
 
 const unitData = [
   18, 45, 72, 98, 130, 158, 200, 242, 290, 328, 372, 410,
-  425, 440, 455, 465,
+  425, 440, 465, 518
 ];
 
 const chartData = {
@@ -256,10 +256,10 @@ export default function SocialProofSection() {
                   lineHeight: 1,
                 }}
               >
-                +465
+                +518
               </div>
               <div style={{ fontSize: "13px", color: "var(--color-muted)", marginTop: "2px" }}>
-                Units all time
+                Units last 12 months
               </div>
             </div>
             <div

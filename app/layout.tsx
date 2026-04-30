@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "sports analytics, sports picks, sports betting, free picks, telegram sports, data-driven predictions, sports handicapping",
   authors: [{ name: "TK Sports Analytics" }],
   openGraph: {
-    title: "TK Sports Analytics | Stop Guessing. Start Winning.",
+    title: "TK Sports Analytics | Stop Guessing. Start Investing.",
     description:
       "Join our growing community of data-driven sports bettors getting FREE predictions daily. +465 Units all time. Verified on Action Network.",
     type: "website",
