@@ -34,14 +34,14 @@ ChartJS.register(
 );
 
 const months = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   "Jan", "Feb", "Mar", "Apr",
 ];
 
 const unitData = [
-  18, 45, 72, 98, 130, 158, 200, 242, 290, 328, 372, 410,
-  425, 440, 465, 518
+  18, 45, 77, 200, 190, 250, 230, 320, 310, 370, 465, 518
+
 ];
 
 const chartData = {

@@ -1,5 +1,6 @@
 import StickyNav from "@/components/StickyNav";
 import HeroSection from "@/components/HeroSection";
+import CountdownTimer from "@/components/CountdownTimer";
 import SocialProofSection from "@/components/SocialProofSection";
 import WhatYouGetSection from "@/components/WhatYouGetSection";
 import CredibilitySection from "@/components/CredibilitySection";
@@ -18,6 +19,9 @@ export default function Home() {
       <main>
         {/* Section 1: Hero */}
         <HeroSection />
+
+        {/* Urgency: Countdown Timer */}
+        <CountdownTimer />
 
         {/* Divider */}
         <div className="divider" />
