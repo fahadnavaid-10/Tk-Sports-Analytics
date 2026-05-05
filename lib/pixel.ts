@@ -53,17 +53,23 @@ export function trackViewContent(contentName: string) {
  */
 export function trackTelegramClick(source: string) {
   // Standard Lead event — appears in Meta Ads as a conversion
+  // value + currency enable Meta's Value-Based Optimization (VBO)
   fbq("track", "Lead", {
     content_name: "Free Telegram Join",
     content_category: "CTA",
     source_button: source,
     pixel_id: PIXEL_ID,
+    value: 1.00,
+    currency: "USD",
   });
 
   // Custom event for granular button-level breakdown
+  // value + currency satisfy Meta's Advanced Matching / conversion setup
   fbq("trackCustom", "TelegramClick", {
     button_id: source,
     action: "join_free_telegram",
+    value: 1.00,
+    currency: "USD",
   });
 }
 
