@@ -25,13 +25,13 @@ export default function HeroSection() {
 
   useEffect(() => {
     const targets = [
-      { id: "counter-units", end: 518, prefix: "+", suffix: "" },
-      { id: "counter-wins", end: 1220, prefix: "", suffix: "-972" },
-      { id: "counter-roi", end: 9, prefix: "", suffix: "%" },
-      { id: "counter-clv", end: 72, prefix: "", suffix: "%" },
+      { id: "counter-units", end: 518, prefix: "+", suffix: "", noFormat: false },
+      { id: "counter-wins", end: 1220, prefix: "", suffix: "-972", noFormat: true },
+      { id: "counter-roi", end: 9, prefix: "", suffix: "%", noFormat: false },
+      { id: "counter-clv", end: 72, prefix: "", suffix: "%", noFormat: false },
     ];
 
-    const animateCounter = (el: HTMLElement, end: number, prefix: string, suffix: string) => {
+    const animateCounter = (el: HTMLElement, end: number, prefix: string, suffix: string, noFormat?: boolean) => {
       const duration = 1800;
       const start = performance.now();
       const update = (time: number) => {
@@ -39,7 +39,7 @@ export default function HeroSection() {
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
         const current = Math.floor(eased * end);
-        el.textContent = `${prefix}${current.toLocaleString()}${suffix}`;
+        el.textContent = `${prefix}${noFormat ? current : current.toLocaleString()}${suffix}`;
         if (progress < 1) requestAnimationFrame(update);
       };
       requestAnimationFrame(update);
@@ -52,9 +52,9 @@ export default function HeroSection() {
             // Fire counter animation once
             if (!hasAnimated.current) {
               hasAnimated.current = true;
-              targets.forEach(({ id, end, prefix, suffix }) => {
+              targets.forEach(({ id, end, prefix, suffix, noFormat }) => {
                 const el = document.getElementById(id);
-                if (el) animateCounter(el, end, prefix, suffix);
+                if (el) animateCounter(el, end, prefix, suffix, noFormat);
               });
             }
             // Track ViewContent once for Hero section
@@ -133,20 +133,20 @@ export default function HeroSection() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "8px",
+                gap: "10px",
                 background: "rgba(255,215,0,0.08)",
                 border: "1px solid rgba(255,215,0,0.2)",
                 color: "#ffd700",
                 fontFamily: "var(--font-mono)",
-                fontSize: "10px",
+                fontSize: "16px",
                 fontWeight: 700,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                padding: "6px 14px",
+                padding: "10px 22px",
                 borderRadius: "100px",
               }}
             >
-              <span className="live-dot" style={{ background: "#ffd700", boxShadow: "0 0 6px #ffd700" }} />
+              <span className="live-dot" style={{ background: "#ffd700", boxShadow: "0 0 6px #ffd700", width: "10px", height: "10px" }} />
               TK SPORTS ANALYTICS
             </span>
           </div>
