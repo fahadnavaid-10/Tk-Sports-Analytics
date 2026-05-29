@@ -4,9 +4,9 @@ import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
 import TelegramIcon from "./TelegramIcon";
 
 const statsGrid = [
-  { value: "+518", label: "Units Last 12 months", color: "var(--color-green)" },
+  { value: "+518", label: "Units Last 12 months", color: "var(--color-gold)" },
   { value: "1220-972", label: "Record", color: "var(--color-gold)" },
-  { value: "9%", label: "ROI", color: "var(--color-green)" },
+  { value: "9%", label: "ROI", color: "var(--color-gold)" },
   { value: "72%", label: "CLV (Closing Line Value)", color: "var(--color-gold)" },
 ];
 
@@ -30,9 +30,11 @@ export default function CredibilitySection() {
         <div style={{ textAlign: "center", marginBottom: "52px" }}>
           <span className="section-label">📉 The Numbers</span>
           <h2 className="section-title">
-            Verified Performance Across
-            <br />
-            <span className="gold">All Major Sports</span>
+            <span className="gold">
+              Verified Performance Across
+              <br />
+              All Major Sports
+            </span>
           </h2>
           <p
             className="section-subtitle"

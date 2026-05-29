@@ -51,9 +51,11 @@ export default function FAQSection() {
         <div style={{ textAlign: "center", marginBottom: "52px" }}>
           <span className="section-label">❓ FAQ</span>
           <h2 className="section-title">
-            Frequently Asked
-            <br />
-            <span className="gold">Questions</span>
+            <span className="gold">
+              Frequently Asked
+              <br />
+              Questions
+            </span>
           </h2>
           <p className="section-subtitle" style={{ margin: "0 auto", textAlign: "center" }}>
             Everything you need to know before joining. Still have questions?

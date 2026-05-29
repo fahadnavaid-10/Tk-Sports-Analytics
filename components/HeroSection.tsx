@@ -20,7 +20,7 @@ const TICKER_ITEMS = [
 ];
 
 export default function HeroSection() {
-  const counterRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const hasAnimated = useRef(false);
   const viewTracked = useRef(false);
 
@@ -50,6 +50,7 @@ export default function HeroSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
             // Fire counter animation once
             if (!hasAnimated.current) {
               hasAnimated.current = true;
@@ -66,10 +67,10 @@ export default function HeroSection() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.15 }
     );
 
-    if (counterRef.current) observer.observe(counterRef.current);
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -77,20 +78,34 @@ export default function HeroSection() {
 
   return (
     <>
+      {/* Viewport 1: Responsive Image Hero */}
+      <section className="hero-image-section">
+        {/* The Hero Image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/120222.jpg"
+          alt="TK Sports Analytics Hero"
+          className="hero-img-element"
+        />
+
+        {/* Gradient overlays to blend with navbar and bottom content */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, rgba(0, 9, 78, 0.4) 0%, transparent 20%, transparent 80%, #00094E 100%)",
+            pointerEvents: "none",
+            zIndex: 1,
+          }}
+        />
+      </section>
+
+      {/* Viewport 2: Text content, counters, and ticker */}
       <section
-        className="hero-section"
-        style={{
-          minHeight: "100svh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-          overflow: "hidden",
-          padding: "0",
-        }}
+        className="hero-section-text"
+        ref={sectionRef}
       >
-        {/* Background */}
+        {/* Background grids */}
         <div
           aria-hidden="true"
           style={{
@@ -115,11 +130,12 @@ export default function HeroSection() {
 
         {/* Main content */}
         <div
+          className="animate-fade-wrapper"
           style={{
             position: "relative",
             zIndex: 1,
             textAlign: "center",
-            padding: "90px 20px 48px",
+            padding: "0 20px 48px",
             width: "100%",
             maxWidth: "820px",
             margin: "0 auto",
@@ -130,42 +146,19 @@ export default function HeroSection() {
             className="animate-fade-in"
             style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "24px" }}
           >
-            <span
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                background: "rgba(255,215,0,0.08)",
-                border: "1px solid rgba(255,215,0,0.2)",
-                color: "#ffd700",
-                fontFamily: "var(--font-mono)",
-                fontSize: "16px",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                padding: "10px 22px",
-                borderRadius: "100px",
-              }}
-            >
-              <span className="live-dot" style={{ background: "#ffd700", boxShadow: "0 0 6px #ffd700", width: "10px", height: "10px" }} />
-              TK SPORTS ANALYTICS
-            </span>
+            
           </div>
 
           {/* Headline */}
           <h1
-            className="animate-fade-up"
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "clamp(38px, 9vw, 80px)",
+              fontSize: "clamp(28px, 8vw, 72px)",
               fontWeight: 900,
               lineHeight: 1.05,
               color: "#ffffff",
               marginBottom: "20px",
               letterSpacing: "-0.02em",
-              animationDelay: "0.1s",
-              opacity: 0,
-              animationFillMode: "forwards",
             }}
           >
             Stop Guessing.
@@ -184,16 +177,12 @@ export default function HeroSection() {
 
           {/* Sub-headline */}
           <p
-            className="animate-fade-up"
             style={{
-              fontSize: "clamp(16px, 3vw, 20px)",
+              fontSize: "clamp(14px, 2.8vw, 19px)",
               color: "#9a9a9a",
               margin: "0 auto 36px",
               maxWidth: "560px",
               lineHeight: 1.6,
-              animationDelay: "0.2s",
-              opacity: 0,
-              animationFillMode: "forwards",
               padding: "0 4px",
             }}
           >
@@ -206,37 +195,30 @@ export default function HeroSection() {
 
           {/* CTA — hero_main_cta */}
           <div
-            className="animate-fade-up"
             style={{
               display: "flex",
               justifyContent: "center",
-              animationDelay: "0.3s",
-              opacity: 0,
-              animationFillMode: "forwards",
               marginBottom: "18px",
               padding: "0 8px",
             }}
           >
             <a
-              id="hero-cta"
+              id="hero-cta-2"
               href="https://t.me/+BtPSFXesFkRiZWEx"
               className="cta-button animate-pulse-glow"
-              onClick={() => { trackTelegramClick("hero_main_cta"); }}
+              onClick={() => { trackTelegramClick("hero_text_cta"); }}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontSize: "clamp(15px, 3vw, 18px)", padding: "20px 32px" }}
+              style={{ fontSize: "clamp(14px, 3vw, 18px)", padding: "16px 28px", width: "100%", maxWidth: "420px" }}
             >
-              <TelegramIcon size={20} /> JOIN FREE TELEGRAM NOW
+              <TelegramIcon size={18} /> JOIN FREE TELEGRAM NOW
             </a>
           </div>
 
           {/* Trust badges */}
           <div
-            className="trust-row animate-fade-up"
+            className="trust-row"
             style={{
-              animationDelay: "0.4s",
-              opacity: 0,
-              animationFillMode: "forwards",
               gap: "12px",
             }}
           >
@@ -247,15 +229,14 @@ export default function HeroSection() {
 
           {/* Mini stats row */}
           <div
-            ref={counterRef}
-            className="animate-fade-up hero-stats-grid"
-            style={{ marginTop: "44px", animationDelay: "0.5s", opacity: 0, animationFillMode: "forwards" }}
+            className="hero-stats-grid"
+            style={{ marginTop: "44px" }}
           >
             {[
-              { id: "counter-units", label: "Units Last 12 months" },
-              { id: "counter-wins", label: "Record" },
-              { id: "counter-roi", label: "ROI" },
-              { id: "counter-clv", label: "CLV (Closing Line Value)" },
+              { id: "counter-units", label: "Units Last 12 months", color: "var(--color-gold)" },
+              { id: "counter-wins", label: "Record", color: "var(--color-gold)" },
+              { id: "counter-roi", label: "ROI", color: "var(--color-gold)" },
+              { id: "counter-clv", label: "CLV (Closing Line Value)", color: "var(--color-gold)" },
             ].map((item) => (
               <div key={item.id} className="hero-stat-cell">
                 <div
@@ -264,7 +245,7 @@ export default function HeroSection() {
                     fontFamily: "var(--font-mono)",
                     fontSize: "clamp(20px, 5vw, 30px)",
                     fontWeight: 700,
-                    color: "var(--color-green)",
+                    color: item.color,
                     lineHeight: 1,
                     marginBottom: "6px",
                   }}
@@ -293,6 +274,30 @@ export default function HeroSection() {
       </section>
 
       <style>{`
+        .hero-image-section {
+          position: relative;
+          width: 100%;
+          height: 100dvh;
+          overflow: hidden;
+          background: #00094E;
+        }
+        .hero-img-element {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+        .hero-section-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          padding: 80px 20px 0;
+          background: var(--color-bg);
+        }
         .hero-stats-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -306,6 +311,27 @@ export default function HeroSection() {
           background: var(--color-card);
           padding: 18px 8px;
           text-align: center;
+        }
+        .animate-fade-wrapper {
+          opacity: 0;
+          transform: translateY(24px);
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-section-text.animate-in .animate-fade-wrapper {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+          .hero-image-section {
+            height: auto;
+          }
+          .hero-img-element {
+            height: auto;
+            object-fit: contain;
+          }
+          .hero-section-text {
+            padding: 48px 16px 0;
+          }
         }
         @media (max-width: 480px) {
           .hero-stats-grid { grid-template-columns: repeat(2, 1fr); }

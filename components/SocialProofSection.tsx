@@ -170,9 +170,11 @@ export default function SocialProofSection() {
         <div style={{ textAlign: "center", marginBottom: "52px" }}>
           <span className="section-label">📊 Verified Results</span>
           <h2 className="section-title">
-            Every Single Pick
-            <br />
-            <span className="gold">Tracked Publicly</span>
+            <span className="gold">
+              Every Single Pick
+              <br />
+              Tracked Publicly
+            </span>
           </h2>
           <p
             className="section-subtitle"
@@ -253,7 +255,7 @@ export default function SocialProofSection() {
                   fontFamily: "var(--font-mono)",
                   fontSize: "32px",
                   fontWeight: 700,
-                  color: "var(--color-green)",
+                  color: "var(--color-gold)",
                   lineHeight: 1,
                 }}
               >
