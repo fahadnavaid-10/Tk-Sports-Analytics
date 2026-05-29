@@ -1,13 +1,14 @@
 "use client";
 
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const benefits = [
   {
     icon: "📊",
     title: "DAILY PREDICTIONS",
     desc: "Real-time sports picks across MLB, NFL, NBA, NCAAF, and NCAAB — based on quantitative models and syndicate data.",
-    color: "#00ff88",
+    color: "#34A8E2",
   },
   {
     icon: "🧠",
@@ -19,7 +20,7 @@ const benefits = [
     icon: "📈",
     title: "VERIFIED TRACK RECORD",
     desc: "Every single result tracked publicly. No locks. No hype. Just transparent data you can audit yourself on Action Network.",
-    color: "#00ff88",
+    color: "#34A8E2",
   },
   {
     icon: "💬",
@@ -31,7 +32,7 @@ const benefits = [
     icon: "⚡",
     title: "INSTANT ALERTS",
     desc: "Get push notifications the second a play is released. Never miss an opportunity to lock in the best line before it moves.",
-    color: "#00ff88",
+    color: "#34A8E2",
   },
   {
     icon: "🎯",
@@ -97,7 +98,7 @@ export default function WhatYouGetSection() {
                 style={{
                   width: "52px",
                   height: "52px",
-                  background: `rgba(${b.color === "#00ff88" ? "0,255,136" : "255,215,0"},0.08)`,
+                  background: `rgba(${b.color === "#34A8E2" ? "52,168,226" : "255,215,0"},0.08)`,
                   border: `1px solid ${b.color}25`,
                   borderRadius: "12px",
                   display: "flex",
@@ -132,14 +133,14 @@ export default function WhatYouGetSection() {
         <div style={{ textAlign: "center" }}>
           <a
             id="benefits-cta"
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button"
             onClick={() => { trackTelegramClick("benefits_section_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}
           >
-            🚀 GET FREE ACCESS NOW
+            <TelegramIcon size={19} /> GET FREE ACCESS NOW
           </a>
           <p style={{ marginTop: "14px", fontSize: "13px", color: "var(--color-muted-2)" }}>
             Opens Telegram instantly · No signup form

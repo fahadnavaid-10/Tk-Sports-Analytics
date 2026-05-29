@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import { trackTelegramClick } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
-const TELEGRAM_URL = "https://t.me/TKSportsAnalytics_Free";
+const TELEGRAM_URL = "https://t.me/+BtPSFXesFkRiZWEx";
 
 /** Next upcoming pick drop times (hours in 24h, user's local timezone) */
 const DROP_HOURS = [12, 18, 23]; // 12 PM, 6 PM, 11 PM (actual 11:59)
@@ -83,7 +84,7 @@ export default function CountdownTimer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            JOIN FREE NOW
+            <TelegramIcon size={20} /> JOIN FREE NOW
           </a>
         </div>
       </section>
@@ -96,15 +97,15 @@ export default function CountdownTimer() {
         }
 
         .cdt-container {
-          background: #2d2d2d;
-          border: 2px solid #00ff88;
+          background: #001B8B;
+          border: 2px solid #34A8E2;
           border-radius: 12px;
           padding: 30px;
           margin: 40px auto;
           max-width: 700px;
           width: 100%;
           text-align: center;
-          box-shadow: 0 0 40px rgba(0,255,136,0.08), 0 8px 40px rgba(0,0,0,0.4);
+          box-shadow: 0 0 40px rgba(52,168,226,0.12), 0 8px 40px rgba(0,0,0,0.4);
         }
 
         .cdt-bolt {
@@ -132,14 +133,14 @@ export default function CountdownTimer() {
           font-family: 'Courier New', monospace;
           font-size: 48px;
           font-weight: 900;
-          color: #00ff88;
+          color: #34A8E2;
           letter-spacing: 0.04em;
-          text-shadow: 0 0 20px rgba(0,255,136,0.4);
+          text-shadow: 0 0 20px rgba(52,168,226,0.5);
           display: inline-block;
         }
 
         .cdt-subtext {
-          color: #808080;
+          color: #8a9fd4;
           font-size: 16px;
           margin-bottom: 24px;
           line-height: 1.5;
@@ -149,8 +150,8 @@ export default function CountdownTimer() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          background: #00ff88;
-          color: #000000;
+          background: #34A8E2;
+          color: #ffffff;
           font-family: 'Montserrat', 'Inter', sans-serif;
           font-size: 18px;
           font-weight: 800;
@@ -163,13 +164,13 @@ export default function CountdownTimer() {
           transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
           min-height: 48px;
           min-width: 200px;
-          box-shadow: 0 4px 20px rgba(0,255,136,0.3);
+          box-shadow: 0 4px 20px rgba(52,168,226,0.4);
         }
 
         .cdt-cta:hover {
           transform: scale(1.05);
-          background: #00e57a;
-          box-shadow: 0 8px 30px rgba(0,255,136,0.5);
+          background: #1a90cc;
+          box-shadow: 0 8px 30px rgba(52,168,226,0.6);
         }
 
         .cdt-cta:active {

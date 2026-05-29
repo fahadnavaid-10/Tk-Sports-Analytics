@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const TICKER_ITEMS = [
   "+518 Units Last 12 Months",
@@ -96,7 +97,7 @@ export default function HeroSection() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,255,136,0.06) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(255,215,0,0.04) 0%, transparent 60%), #0f0f0f",
+              "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(52,168,226,0.08) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(255,215,0,0.04) 0%, transparent 60%), #00094E",
             zIndex: 0,
           }}
         />
@@ -171,7 +172,7 @@ export default function HeroSection() {
             <br />
             <span
               style={{
-                background: "linear-gradient(135deg, #00ff88 0%, #00cc6a 100%)",
+                background: "linear-gradient(135deg, #34A8E2 0%, #1a90cc 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -218,14 +219,14 @@ export default function HeroSection() {
           >
             <a
               id="hero-cta"
-              href="https://t.me/TKSportsAnalytics_Free"
+              href="https://t.me/+BtPSFXesFkRiZWEx"
               className="cta-button animate-pulse-glow"
               onClick={() => { trackTelegramClick("hero_main_cta"); }}
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "clamp(15px, 3vw, 18px)", padding: "20px 32px" }}
             >
-              🚀 JOIN FREE TELEGRAM NOW
+              <TelegramIcon size={20} /> JOIN FREE TELEGRAM NOW
             </a>
           </div>
 

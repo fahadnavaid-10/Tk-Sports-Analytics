@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TelegramIcon from "@/components/TelegramIcon";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | TK Sports Analytics",
@@ -42,7 +43,7 @@ const SECTIONS = [
     title: "Telegram Channel",
     icon: "✈️",
     highlight: false,
-    content: `When you join our Telegram channel (t.me/TKSportsAnalytics_Free), Telegram's own Privacy Policy and Terms of Service apply. TK Sports Analytics does not control Telegram's data collection practices.\n\nBy joining the channel, you are subject to Telegram's policies. We recommend reviewing Telegram's privacy policy at: https://telegram.org/privacy`,
+    content: `When you join our Telegram channel (t.me/+BtPSFXesFkRiZWEx), Telegram's own Privacy Policy and Terms of Service apply. TK Sports Analytics does not control Telegram's data collection practices.\n\nBy joining the channel, you are subject to Telegram's policies. We recommend reviewing Telegram's privacy policy at: https://telegram.org/privacy`,
   },
   {
     title: "Cookies",
@@ -78,7 +79,7 @@ const SECTIONS = [
     title: "Contact Us",
     icon: "📬",
     highlight: false,
-    content: `If you have any questions about this Privacy Policy, please contact us through our Telegram channel:\n\nhttps://t.me/TKSportsAnalytics_Free\n\nThis Privacy Policy was last updated: April 2026`,
+    content: `If you have any questions about this Privacy Policy, please contact us through our Telegram channel:\n\nhttps://t.me/+BtPSFXesFkRiZWEx\n\nThis Privacy Policy was last updated: April 2026`,
   },
 ];
 
@@ -91,8 +92,8 @@ export default function PrivacyPage() {
           position: "sticky",
           top: 0,
           zIndex: 100,
-          background: "rgba(10,10,10,0.97)",
-          borderBottom: "1px solid #2a2a2a",
+          background: "rgba(0, 9, 78, 0.97)",
+          borderBottom: "1px solid #1a3aaa",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           padding: "0 16px",
@@ -110,13 +111,13 @@ export default function PrivacyPage() {
         >
           <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/tk-logo.png" alt="TK Sports Analytics" style={{ height: "32px", width: "auto" }} />
+            <img src="/tk-logo.jpg" alt="TK Sports Analytics" style={{ height: "32px", width: "auto" }} />
           </Link>
           <Link
             href="/"
             style={{
               fontSize: "13px",
-              color: "var(--color-muted)",
+              color: "#8a9fd4",
               textDecoration: "none",
               display: "flex",
               alignItems: "center",
@@ -132,15 +133,15 @@ export default function PrivacyPage() {
       <main
         style={{
           minHeight: "100vh",
-          background: "#0f0f0f",
+          background: "#00094E",
           paddingBottom: "80px",
         }}
       >
         {/* Hero */}
         <div
           style={{
-            background: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,255,136,0.05) 0%, transparent 70%)",
-            borderBottom: "1px solid #2a2a2a",
+            background: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(52,168,226,0.1) 0%, transparent 70%)",
+            borderBottom: "1px solid #1a3aaa",
             padding: "60px 16px 48px",
             textAlign: "center",
           }}
@@ -150,9 +151,9 @@ export default function PrivacyPage() {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              background: "rgba(0,255,136,0.08)",
-              border: "1px solid rgba(0,255,136,0.2)",
-              color: "#00ff88",
+              background: "rgba(52,168,226,0.1)",
+              border: "1px solid rgba(52,168,226,0.25)",
+              color: "#34A8E2",
               fontFamily: "var(--font-mono)",
               fontSize: "10px",
               fontWeight: 700,
@@ -177,7 +178,7 @@ export default function PrivacyPage() {
           >
             Privacy Policy
           </h1>
-          <p style={{ fontSize: "16px", color: "#808080", maxWidth: "540px", margin: "0 auto" }}>
+          <p style={{ fontSize: "16px", color: "#8a9fd4", maxWidth: "540px", margin: "0 auto" }}>
             TK Sports Analytics — Last updated April 2026
           </p>
 
@@ -208,8 +209,8 @@ export default function PrivacyPage() {
               key={i}
               style={{
                 marginBottom: "32px",
-                background: section.highlight ? "rgba(255,80,80,0.04)" : "#1a1a1a",
-                border: `1px solid ${section.highlight ? "rgba(255,80,80,0.2)" : "#2a2a2a"}`,
+                background: section.highlight ? "rgba(255,80,80,0.06)" : "#001B8B",
+                border: `1px solid ${section.highlight ? "rgba(255,80,80,0.25)" : "#1a3aaa"}`,
                 borderRadius: "12px",
                 padding: "28px 24px",
               }}
@@ -230,7 +231,7 @@ export default function PrivacyPage() {
                 <span>{section.icon}</span>
                 {section.title}
               </h2>
-              <div style={{ fontSize: "15px", color: "#909090", lineHeight: 1.8 }}>
+              <div style={{ fontSize: "15px", color: "#8a9fd4", lineHeight: 1.8 }}>
                 {section.content.split("\n\n").map((para, j) => (
                   <p
                     key={j}
@@ -246,26 +247,26 @@ export default function PrivacyPage() {
             </div>
           ))}
 
-          {/* Back link */}
+          {/* Back / CTA */}
           <div style={{ textAlign: "center", marginTop: "40px" }}>
             <Link
               href="/"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "8px",
-                background: "linear-gradient(135deg, #00ff88, #00e57a)",
-                color: "#000",
+                gap: "10px",
+                background: "linear-gradient(135deg, #34A8E2, #1a90cc)",
+                color: "#ffffff",
                 fontFamily: "var(--font-heading)",
                 fontSize: "15px",
                 fontWeight: 800,
                 padding: "16px 32px",
                 borderRadius: "10px",
                 textDecoration: "none",
-                boxShadow: "0 4px 24px rgba(0,255,136,0.2)",
+                boxShadow: "0 4px 24px rgba(52,168,226,0.35)",
               }}
             >
-              🚀 Back to Free Telegram Join
+              <TelegramIcon size={18} /> Back to Free Telegram Join
             </Link>
           </div>
         </div>
@@ -274,19 +275,19 @@ export default function PrivacyPage() {
       {/* Footer */}
       <footer
         style={{
-          background: "#0a0a0a",
-          borderTop: "1px solid #2a2a2a",
+          background: "#000940",
+          borderTop: "1px solid #1a3aaa",
           padding: "28px 16px",
           textAlign: "center",
         }}
       >
-        <p style={{ fontSize: "11px", color: "#5a5a5a", lineHeight: 1.75, maxWidth: "700px", margin: "0 auto" }}>
+        <p style={{ fontSize: "11px", color: "#5a6fa8", lineHeight: 1.75, maxWidth: "700px", margin: "0 auto" }}>
           Must be 21+ to access this site. TK Sports Analytics provides data-driven sports insights for informational
           and entertainment purposes only. We do not guarantee outcomes or profits. Past performance is not indicative of
           future results. This site does not operate as a sportsbook and does not accept wagers. If you or someone you
           know has a gambling problem, call 1-800-GAMBLER.
         </p>
-        <p style={{ marginTop: "16px", fontSize: "12px", color: "#3a3a3a" }}>
+        <p style={{ marginTop: "16px", fontSize: "12px", color: "#2a4ac0" }}>
           © 2026 TK Sports Analytics. All rights reserved.
         </p>
       </footer>

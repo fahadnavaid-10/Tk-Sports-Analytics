@@ -1,6 +1,7 @@
 "use client";
 
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const steps = [
   {
@@ -74,7 +75,7 @@ export default function HowItWorksSection() {
                   width: "3px",
                   background: i === 2
                     ? "linear-gradient(to bottom, #ffd700, #c9a800)"
-                    : "linear-gradient(to bottom, #00ff88, #00cc6a)",
+                    : "linear-gradient(to bottom, #34A8E2, #1a90cc)",
                 }}
               />
               <div
@@ -115,8 +116,8 @@ export default function HowItWorksSection() {
                       fontFamily: "var(--font-mono)",
                       fontSize: "11px",
                       color: i === 2 ? "var(--color-gold)" : "var(--color-green)",
-                      background: i === 2 ? "rgba(255,215,0,0.08)" : "rgba(0,255,136,0.08)",
-                      border: `1px solid ${i === 2 ? "rgba(255,215,0,0.2)" : "rgba(0,255,136,0.2)"}`,
+                      background: i === 2 ? "rgba(255,215,0,0.08)" : "rgba(52,168,226,0.08)",
+                      border: `1px solid ${i === 2 ? "rgba(255,215,0,0.2)" : "rgba(52,168,226,0.25)"}`,
                       padding: "3px 10px",
                       borderRadius: "100px",
                       fontWeight: 600,
@@ -137,14 +138,14 @@ export default function HowItWorksSection() {
         <div style={{ textAlign: "center" }}>
           <a
             id="how-it-works-cta"
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button"
             onClick={() => { trackTelegramClick("how_it_works_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: "0 auto" }}
           >
-            🚀 JOIN US FREE NOW!
+            <TelegramIcon size={19} /> JOIN US FREE NOW!
           </a>
           <p style={{ marginTop: "14px", fontSize: "13px", color: "var(--color-muted-2)" }}>
             Instant access · No forms · No payment required

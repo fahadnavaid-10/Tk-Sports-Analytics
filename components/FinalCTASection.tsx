@@ -1,6 +1,7 @@
 "use client";
 
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const trustBadges = [
   { icon: "🔞", label: "21+ Only" },
@@ -23,7 +24,7 @@ export default function FinalCTASection() {
       className="section"
       style={{
         background:
-          "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(0,255,136,0.07) 0%, rgba(255,215,0,0.03) 40%, transparent 70%), var(--color-bg-2)",
+          "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(52,168,226,0.08) 0%, rgba(255,215,0,0.03) 40%, transparent 70%), var(--color-bg-2)",
         textAlign: "center",
       }}
       onMouseEnter={() => trackViewContent("Final CTA — Stop Losing Money on Guesswork")}
@@ -31,7 +32,7 @@ export default function FinalCTASection() {
       <div className="container" style={{ maxWidth: "700px", margin: "0 auto" }}>
         {/* Eyebrow */}
         <span className="section-label" style={{ margin: "0 auto 24px" }}>
-          🚀 Join Free Today
+          <TelegramIcon size={14} /> Join Free Today
         </span>
 
         {/* Headline */}
@@ -50,7 +51,7 @@ export default function FinalCTASection() {
           <br />
           <span
             style={{
-              background: "linear-gradient(135deg, #00ff88, #00cc6a)",
+              background: "linear-gradient(135deg, #34A8E2, #1a90cc)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -96,14 +97,14 @@ export default function FinalCTASection() {
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
           <a
             id="final-cta"
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button animate-pulse-glow"
             onClick={() => { trackTelegramClick("final_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
             style={{ fontSize: "19px", padding: "26px 48px", maxWidth: "520px", letterSpacing: "0.01em" }}
           >
-            🚀 JOIN FREE TELEGRAM NOW
+            <TelegramIcon size={20} /> JOIN FREE TELEGRAM NOW
           </a>
         </div>
 

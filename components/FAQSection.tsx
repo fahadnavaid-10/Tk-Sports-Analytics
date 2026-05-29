@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const faqs = [
   {
@@ -94,13 +95,13 @@ export default function FAQSection() {
         {/* Bottom CTA */}
         <div style={{ textAlign: "center", marginTop: "48px" }}>
           <a
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button"
             onClick={() => { trackTelegramClick("faq_footer_cta"); }}
             target="_blank"
             rel="noopener noreferrer"
           >
-            🚀 JOIN FREE TELEGRAM NOW
+            <TelegramIcon size={19} /> JOIN FREE TELEGRAM NOW
           </a>
           <p
             style={{

@@ -2,8 +2,9 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { trackTelegramClick } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
-const TELEGRAM_URL = "https://t.me/TKSportsAnalytics_Free";
+const TELEGRAM_URL = "https://t.me/+BtPSFXesFkRiZWEx";
 
 export default function ExitIntentPopup() {
   const [visible, setVisible] = useState(false);
@@ -95,8 +96,8 @@ export default function ExitIntentPopup() {
           style={{
             width: "56px",
             height: "56px",
-            background: "linear-gradient(135deg, rgba(0,255,136,0.15), rgba(0,255,136,0.05))",
-            border: "1px solid rgba(0,255,136,0.25)",
+            background: "linear-gradient(135deg, rgba(52,168,226,0.18), rgba(52,168,226,0.06))",
+            border: "1px solid rgba(52,168,226,0.3)",
             borderRadius: "50%",
             display: "flex",
             alignItems: "center",
@@ -164,7 +165,7 @@ export default function ExitIntentPopup() {
           rel="noopener noreferrer"
           style={{ fontSize: "clamp(14px, 3vw, 16px)", padding: "16px 24px" }}
         >
-          🚀 JOIN FREE TELEGRAM
+          <TelegramIcon size={18} /> JOIN FREE TELEGRAM
         </a>
 
         {/* No CC */}

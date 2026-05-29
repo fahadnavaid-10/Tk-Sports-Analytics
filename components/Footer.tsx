@@ -1,6 +1,10 @@
 "use client";
 
 import { trackTelegramClick } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
+import InstagramIcon from "./InstagramIcon";
+import TikTokIcon from "./TikTokIcon";
+import XIcon from "./XIcon";
 
 export default function Footer() {
   return (
@@ -11,6 +15,39 @@ export default function Footer() {
         padding: "52px 16px 28px",
       }}
     >
+      <style>{`
+        .footer-social-link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          color: var(--color-muted);
+          transition: color 0.2s;
+          text-decoration: none;
+        }
+        .footer-social-link:hover {
+          color: var(--color-white) !important;
+        }
+        .footer-social-link svg {
+          color: var(--color-muted);
+          transition: color 0.2s, transform 0.2s;
+        }
+        .footer-social-link:hover svg {
+          transform: scale(1.15);
+        }
+        .footer-social-link.instagram:hover svg {
+          color: #E1306C;
+        }
+        .footer-social-link.tiktok:hover svg {
+          color: #00f2fe;
+        }
+        .footer-social-link.x:hover svg {
+          color: #ffffff;
+        }
+        .footer-social-link.telegram:hover svg {
+          color: #34A8E2;
+        }
+      `}</style>
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         {/* Top grid */}
         <div
@@ -27,10 +64,10 @@ export default function Footer() {
           <div>
             <div style={{ marginBottom: "16px", display: "flex", alignItems: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/tk-logo.png" alt="TK Sports Analytics" style={{ height: "42px", width: "auto" }} />
+              <img src="/tk-logo.jpg" alt="TK Sports Analytics" style={{ height: "42px", width: "auto" }} />
             </div>
             <p style={{ fontSize: "13px", color: "var(--color-muted)", lineHeight: 1.6, maxWidth: "220px" }}>
-              Data-driven sports consulting for disciplined investors. +465 Units. Verified on Action Network.
+              Data-driven sports consulting for disciplined investors. +518 Units. Verified on Action Network.
             </p>
           </div>
 
@@ -41,7 +78,7 @@ export default function Footer() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {[
-                { label: "Free Telegram", href: "https://t.me/TKSportsAnalytics_Free" },
+                { label: "Free Telegram", href: "https://t.me/+BtPSFXesFkRiZWEx" },
                 { label: "Action Network", href: "https://app.actionnetwork.com/4zu6/ul9ste7w" },
                 { label: "Privacy Policy", href: "/privacy" },
                 { label: "Terms of Service", href: "#" },
@@ -73,10 +110,10 @@ export default function Footer() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {[
-                { label: "Telegram (Free)", href: "https://t.me/TKSportsAnalytics_Free", icon: "✈️" },
-                { label: "Instagram", href: "https://www.instagram.com/tksportsanalytics/", icon: "📸" },
-                { label: "X (Twitter)", href: "https://x.com/TKSportsGators", icon: "🐦" },
-                { label: "TikTok", href: "https://www.tiktok.com/@tksportsanalytics", icon: "🎵" },
+                { label: "Telegram (Free)", href: "https://t.me/+BtPSFXesFkRiZWEx", icon: <TelegramIcon size={16} />, key: "telegram" },
+                { label: "Instagram", href: "https://www.instagram.com/tksportsanalytics/", icon: <InstagramIcon size={16} />, key: "instagram" },
+                { label: "X (Twitter)", href: "https://x.com/TKSportsGators", icon: <XIcon size={16} />, key: "x" },
+                { label: "TikTok", href: "https://www.tiktok.com/@tksportsanalytics", icon: <TikTokIcon size={16} />, key: "tiktok" },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -88,11 +125,9 @@ export default function Footer() {
                   }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", color: "var(--color-muted)", transition: "color 0.2s" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--color-white)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--color-muted)")}
+                  className={`footer-social-link ${s.key}`}
                 >
-                  <span>{s.icon}</span> {s.label}
+                  {s.icon} {s.label}
                 </a>
               ))}
             </div>

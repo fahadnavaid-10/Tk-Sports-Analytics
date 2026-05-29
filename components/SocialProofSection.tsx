@@ -15,6 +15,7 @@ import {
 
 import dynamic from "next/dynamic";
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 // Dynamically import Line chart to avoid SSR canvas errors
 const Line = dynamic(
@@ -50,14 +51,14 @@ const chartData = {
     {
       label: "Units",
       data: unitData,
-      borderColor: "#00ff88",
+      borderColor: "#34A8E2",
       backgroundColor: (context: { chart: { ctx: CanvasRenderingContext2D; chartArea?: { top: number; bottom: number } } }) => {
         const chart = context.chart;
         const { ctx, chartArea } = chart;
         if (!chartArea) return "transparent";
         const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-        gradient.addColorStop(0, "rgba(0,255,136,0.25)");
-        gradient.addColorStop(1, "rgba(0,255,136,0)");
+        gradient.addColorStop(0, "rgba(52,168,226,0.3)");
+        gradient.addColorStop(1, "rgba(52,168,226,0)");
         return gradient;
       },
       borderWidth: 2.5,
@@ -65,8 +66,8 @@ const chartData = {
       tension: 0.4,
       pointRadius: 3,
       pointHoverRadius: 6,
-      pointBackgroundColor: "#00ff88",
-      pointBorderColor: "#0f0f0f",
+      pointBackgroundColor: "#34A8E2",
+      pointBorderColor: "#00094E",
       pointBorderWidth: 2,
     },
   ],
@@ -79,11 +80,11 @@ const chartOptions = {
   plugins: {
     legend: { display: false },
     tooltip: {
-      backgroundColor: "#1e1e1e",
-      borderColor: "#2a2a2a",
+      backgroundColor: "#001B8B",
+      borderColor: "#2a4ac0",
       borderWidth: 1,
-      titleColor: "#808080",
-      bodyColor: "#00ff88",
+      titleColor: "#8a9fd4",
+      bodyColor: "#34A8E2",
       padding: 12,
       callbacks: {
         label: (ctx: any) => `+${ctx.parsed.y} Units`,
@@ -93,13 +94,13 @@ const chartOptions = {
   scales: {
     x: {
       grid: { color: "rgba(255,255,255,0.04)" },
-      ticks: { color: "#5a5a5a", font: { size: 11 } },
+      ticks: { color: "#5a6fa8", font: { size: 11 } },
       border: { color: "transparent" },
     },
     y: {
       grid: { color: "rgba(255,255,255,0.04)" },
       ticks: {
-        color: "#5a5a5a",
+        color: "#5a6fa8",
         font: { size: 11, family: "Courier New" },
         callback: (v: number | string) => `+${v}`,
       },
@@ -267,8 +268,8 @@ export default function SocialProofSection() {
                 display: "flex",
                 alignItems: "center",
                 gap: "8px",
-                background: "rgba(0,255,136,0.08)",
-                border: "1px solid rgba(0,255,136,0.15)",
+                background: "rgba(52,168,226,0.1)",
+                border: "1px solid rgba(52,168,226,0.2)",
                 padding: "6px 14px",
                 borderRadius: "100px",
               }}
@@ -320,7 +321,7 @@ export default function SocialProofSection() {
                   left: 0,
                   right: 0,
                   height: "2px",
-                  background: "linear-gradient(90deg, transparent, rgba(0,255,136,0.4), transparent)",
+                  background: "linear-gradient(90deg, transparent, rgba(52,168,226,0.4), transparent)",
                 }}
               />
               <div style={{ color: "#ffd700", fontSize: "18px", marginBottom: "14px" }}>
@@ -343,7 +344,7 @@ export default function SocialProofSection() {
                     width: "34px",
                     height: "34px",
                     borderRadius: "50%",
-                    background: "linear-gradient(135deg, rgba(0,255,136,0.2), rgba(255,215,0,0.1))",
+                    background: "linear-gradient(135deg, rgba(52,168,226,0.25), rgba(255,215,0,0.08))",
                     border: "1px solid var(--color-border-2)",
                     display: "flex",
                     alignItems: "center",
@@ -371,13 +372,13 @@ export default function SocialProofSection() {
         {/* CTA */}
         <div style={{ textAlign: "center", marginTop: "48px" }}>
           <a
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { trackTelegramClick("social_proof_cta"); }}
           >
-            🚀 JOIN FREE TELEGRAM NOW
+            <TelegramIcon size={19} /> JOIN FREE TELEGRAM NOW
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { trackTelegramClick, trackViewContent } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 const statsGrid = [
   { value: "+518", label: "Units Last 12 months", color: "var(--color-green)" },
@@ -21,7 +22,7 @@ export default function CredibilitySection() {
   return (
     <section
       className="section"
-      style={{ background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 70%), var(--color-bg-2)" }}
+      style={{ background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(52,168,226,0.05) 0%, transparent 70%), var(--color-bg-2)" }}
       onMouseEnter={() => trackViewContent("Credibility — Verified Numbers")}
     >
       <div className="container" style={{ maxWidth: "1000px", margin: "0 auto" }}>
@@ -146,8 +147,8 @@ export default function CredibilitySection() {
                 {/* Total row */}
                 <tr
                   style={{
-                    background: "rgba(0,255,136,0.04)",
-                    borderTop: "1px solid rgba(0,255,136,0.15)",
+                    background: "rgba(52,168,226,0.05)",
+                    borderTop: "1px solid rgba(52,168,226,0.2)",
                   }}
                 >
                   <td
@@ -204,13 +205,13 @@ export default function CredibilitySection() {
         {/* CTA */}
         <div style={{ textAlign: "center", marginTop: "32px" }}>
           <a
-            href="https://t.me/TKSportsAnalytics_Free"
+            href="https://t.me/+BtPSFXesFkRiZWEx"
             className="cta-button"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { trackTelegramClick("credibility_section_cta"); trackViewContent("Credibility — CTA Clicked"); }}
           >
-            🚀 JOIN FREE TELEGRAM NOW
+            <TelegramIcon size={19} /> JOIN FREE TELEGRAM NOW
           </a>
         </div>
       </div>

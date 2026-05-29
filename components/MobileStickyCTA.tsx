@@ -1,13 +1,14 @@
 "use client";
 
 import { trackTelegramClick } from "@/lib/pixel";
+import TelegramIcon from "./TelegramIcon";
 
 export default function MobileStickyCTA() {
   return (
     <>
       <div className="mobile-sticky-cta">
         <a
-          href="https://t.me/TKSportsAnalytics_Free"
+          href="https://t.me/+BtPSFXesFkRiZWEx"
           onClick={() => { trackTelegramClick("mobile_sticky_cta"); }}
           target="_blank"
           rel="noopener noreferrer"
@@ -16,8 +17,8 @@ export default function MobileStickyCTA() {
             alignItems: "center",
             justifyContent: "center",
             width: "100%",
-            background: "linear-gradient(135deg, #00ff88, #00e57a)",
-            color: "#000",
+            background: "linear-gradient(135deg, #34A8E2, #1a90cc)",
+            color: "#ffffff",
             fontFamily: "var(--font-heading)",
             fontSize: "16px",
             fontWeight: 800,
@@ -25,10 +26,10 @@ export default function MobileStickyCTA() {
             boxShadow: "0 -4px 20px rgba(0,0,0,0.5)",
             textDecoration: "none",
             letterSpacing: "0.02em",
-            borderTop: "1px solid rgba(0,255,136,0.3)",
+            borderTop: "1px solid rgba(52,168,226,0.4)",
           }}
         >
-          🚀 JOIN FREE TELEGRAM
+          <TelegramIcon size={20} /> JOIN FREE TELEGRAM
         </a>
       </div>
       <style>{`
