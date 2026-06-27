@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TK Sports Analytics | Free Sports Predictions",
-    description: "+518 Units. 9% ROI. 55% Win Rate. Join free today.",
+    description: "+518 Units. 9% ROI. Join free today.",
   },
   robots: {
     index: true,
